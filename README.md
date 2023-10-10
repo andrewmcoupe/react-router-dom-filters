@@ -30,9 +30,9 @@ const App = () => {
   const handleClick = () => {
     // ✨ Type-safe filter keys
     updateFilters({
-      instances: 'all',
-      categories: 'all',
-      sortBy: 'price',
+      key: 'instances',
+    //         👆 Type-safe filter keys ✨
+      value: 'all',
     });
   }
   
