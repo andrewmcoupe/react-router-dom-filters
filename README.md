@@ -28,10 +28,9 @@ const App = () => {
   const { activeFilters, updateFilters, resetFilters } = useFilters();
 
   const handleClick = () => {
-    // ✨ Type-safe filter keys
     updateFilters({
       key: 'instances',
-    //         👆 Type-safe filter keys ✨
+            /* 👆Type-safe filter keys ✨ */
       value: 'all',
     });
   }
