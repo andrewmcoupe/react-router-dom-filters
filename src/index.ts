@@ -77,8 +77,12 @@ export const createFiltersHook = <const T extends readonly string[]>(
       [activeFilters, setFilters]
     )
 
+    const resetFilters = useCallback(() => {
+      setSearchParams()
+    }, [setSearchParams])
+
     const hasSearchParams = Object.values(activeFilters).some(Boolean)
 
-    return { activeFilters, updateFilters, hasSearchParams }
+    return { activeFilters, updateFilters, hasSearchParams, resetFilters }
   }
 }
