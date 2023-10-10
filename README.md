@@ -25,7 +25,7 @@ const filterKeys = ['instances', 'categories', 'sortBy'] as const;
 export const useFilters = createFiltersHook(filterKeys);
 
 const App = () => {
-  const { activeFilters, updateFilters } = useFilters();
+  const { activeFilters, updateFilters, resetFilters } = useFilters();
 
   const handleClick = () => {
     // ✨ Type-safe filter keys
@@ -39,7 +39,9 @@ const App = () => {
   return (
     <div>
       <button onClick={handleClick}>Update</button>
+      <button onClick={resetFilters}>Reset filters</button>
     </div>
   );
 };
 ```
+
