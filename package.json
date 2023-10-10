@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "eslint . && tsc"
+    "lint": "eslint . && tsc",
+    "release": "pnpm run build && changeset publish"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
